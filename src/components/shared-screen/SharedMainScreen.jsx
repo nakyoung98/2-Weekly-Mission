@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("main-root"));
 root.render(<SharedMainScreen />);
 
 function SharedMainScreen() {
-  const [folderData, setFolderData] = useState([]);
+  const [folderData, setFolderData] = useState({});
   const [linkData, setLinkData] = useState([]);
 
   useEffect(() => {
@@ -31,6 +31,9 @@ function SharedMainScreen() {
       })
       .then((links) => {
         setLinkData(links);
+      })
+      .catch((error) => {
+        console.error(`데이터 가져오는 중 오류 발생\n${error}`);
       });
   }, []);
 
