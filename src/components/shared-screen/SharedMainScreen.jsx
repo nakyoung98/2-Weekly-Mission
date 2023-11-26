@@ -12,11 +12,6 @@ const root = ReactDOM.createRoot(document.getElementById("main-root"));
 root.render(<SharedMainScreen />);
 
 function SharedMainScreen() {
-    return (
-        <div>
-        <Card classNames={classNames}/>
-        </div>
-    );
   const [folderData, setFolderData] = useState([]);
   const [linkData, setLinkData] = useState([]);
 
@@ -40,3 +35,12 @@ function SharedMainScreen() {
   }, []);
 
   return (
+    <>
+      <FolderInfo />
+      <SearchBar />
+      <TableLayout classNameList={[`table-layout_card`]}>
+        <CardFactory dataList={linkData} />
+      </TableLayout>
+    </>
+  );
+}
