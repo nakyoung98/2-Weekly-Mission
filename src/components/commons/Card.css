@@ -9,7 +9,10 @@
 }
 
 .card__image{
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; 
+    overflow: hidden;
 }
 
 .card__image-container{
