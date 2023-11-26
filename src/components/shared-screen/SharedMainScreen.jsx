@@ -39,7 +39,7 @@ function SharedMainScreen() {
 
   return (
     <>
-      <FolderInfo />
+      <FolderInfo dataList={folderData}/>
       <SearchBar />
       <TableLayout classNameList={[`table-layout_card`]}>
         <CardFactory dataList={linkData} />
