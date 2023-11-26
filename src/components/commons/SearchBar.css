@@ -1,5 +1,5 @@
 .search-bar{
-    width: 1060px;
+    width: min(1066px, 100%);
 
     padding: 15px;
 
