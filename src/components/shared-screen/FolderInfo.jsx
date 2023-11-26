@@ -27,7 +27,7 @@ function FolderProfile({ profileImageSource, profileName }) {
         alt={profileName}
       />
       <p className="folder-info__profile-name">
-        {`@${profileName}`}
+        {`@${profileName ?? ""}`}
       </p>
     </div>
   );
