@@ -6,7 +6,7 @@ const classNames = [`card`];
 function CardFactory({ dataList }) {
   return (
     <>
-      {dataList.map((item) => (
+      {dataList?.map((item) => (
         <Card key={item.id} data={item} classNames={classNames} />
       ))}
     </>
