@@ -20,9 +20,21 @@ function Card({ classNameList = [], data }) {
 
 function CardImage({ src, title }) {
   return (
-    <div className="card__image-container">
-      <img className={"card__image"} src={src} alt={title} />
-    </div>
+    <>
+      {src ? (
+        <div className="card__image-container">
+          <img className="card__image" src={src} alt={title} />
+        </div>
+      ) : (
+        <div className="card__image-container card__image-container_no-image">
+          <img
+            className="card__image card__image_no-image"
+            src="../../image/folder/logo.svg"
+            alt={title}
+          />
+        </div>
+      )}
+    </>
   );
 }
 
