@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import Card from "./Card";
+
+const classNames = [`card`];
 
 function CardFactory({ dataList }) {
-    return (
-        <div>
-            {dataList.map(item => <Card key={item.id} data={item} />)}
-        </div>
-    );
+  return (
+    <>
+      {dataList.map((item) => (
+        <Card key={item.id} data={item} classNames={classNames} />
+      ))}
+    </>
+  );
 }
 
 export default CardFactory;
